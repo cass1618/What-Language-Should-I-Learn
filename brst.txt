@@ -1,0 +1,11 @@
+Language choices
+Javascript
+  design
+Python
+  engineering
+Java
+  finance
+Ruby
+  robotics
+Swift
+  entrepreneur
