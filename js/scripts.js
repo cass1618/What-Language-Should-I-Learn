@@ -23,12 +23,12 @@ function decision () {
 // USER INTERFACE LOGIC
 $(document).ready(function() {
   $("form#mainForm").submit(function(event) {
-    const a = parseInt($("input:radio[name=fieldRadio]:checked").val());
-    const b = parseInt($("input:radio[name=cityRadio]:checked").val());
-    const c = parseInt($("input:radio[name=cityRadio]:checked").val());
+    const fieldVal = parseInt($("input:radio[name=fieldRadio]:checked").val());
+    const cityVal = parseInt($("input:radio[name=cityRadio]:checked").val());
+    const otherVal = parseInt($("input:radio[name=R3]:checked").val());
     
     event.preventDefault();     
-    $(".result").text(decision(a,b,c));
+    $(".result").text(decision(fieldVal, cityVal, otherVal));
     $(".hidden").show();
   });
 });

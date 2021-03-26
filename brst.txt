@@ -1,6 +1,7 @@
 Language choices
-Python
-Java
-Swift
-Javascript
-Ruby
+Python 100-120
+Java 80-100
+SQL - 60-80
+Swift 40-60
+Javascript 20-40
+Ruby 0-20
