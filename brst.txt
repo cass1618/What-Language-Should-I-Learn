@@ -3,6 +3,5 @@ Python
 C++
 Java
 Swift
-C#
 Javascript
 Ruby
