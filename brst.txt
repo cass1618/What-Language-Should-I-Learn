@@ -1,11 +1,8 @@
 Language choices
-Javascript
-  design
 Python
-  engineering
+C++
 Java
-  finance
-Ruby
-  robotics
 Swift
-  entrepreneur
+C#
+Javascript
+Ruby
