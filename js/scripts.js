@@ -15,19 +15,25 @@ function decision (total) {
   }
 }
 
+function add (...nums) {
+  let sum = nums.reduce((num1, num2) => num1 + num2);
+  return sum;
+}
+
 // USER INTERFACE LOGIC
 $(document).ready(function() {
   $("form#mainForm").submit(function(event) {
-    const a = $("input:radio[name=fieldRadio]:checked").val();
-    const b = $("input:radio[name=cityRadio]:checked").val();
-    const c = $("input:radio[name=cityRadio]:checked").val();
-
+    const a = parseInt($("input:radio[name=fieldRadio]:checked").val());
+    const b = parseInt($("input:radio[name=cityRadio]:checked").val());
+    const c = parseInt($("input:radio[name=cityRadio]:checked").val());
     event.preventDefault();
-
+    
+    
     let sum = a + b + c;
+    console.log(sum);
     
     $(".result").text(decision(sum));
-    $(".answer").show();
+    $(".hidden").show();
     
   });
 });
