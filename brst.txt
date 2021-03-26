@@ -1,6 +1,5 @@
 Language choices
 Python
-C++
 Java
 Swift
 Javascript
