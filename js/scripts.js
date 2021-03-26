@@ -25,8 +25,11 @@ $(document).ready(function() {
   $("form#mainForm").submit(function(event) {
     const fieldVal = parseInt($("input:radio[name=fieldRadio]:checked").val());
     const cityVal = parseInt($("input:radio[name=cityRadio]:checked").val());
-    const otherVal = parseInt($("input:radio[name=R3]:checked").val());
+    const otherVal = parseInt($("input:radio[name=appRadio]:checked").val());
+    const companyVal = parseInt($("input:checkbox[name=companyCheckbox]:checked").val());
     
+    console.log(companyVal);
+
     event.preventDefault();     
     $(".result").text(decision(fieldVal, cityVal, otherVal));
     $(".hidden").show();
