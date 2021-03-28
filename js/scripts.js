@@ -1,10 +1,18 @@
 // BUSINESS LOGIC
-function decision () {
+function decision (fieldVal, cityVal, otherVal, companyValSum) {
+  console.log(companyValSum);
   let total = 0
-  for (i = 0; i < arguments.length; i++)
-  {
-    total += arguments[i];
-  }
+  total += fieldVal;
+  total += cityVal;
+  total += otherVal;
+  total += companyValSum;
+
+  console.log(total);
+  // for (i = 0; i < arguments.length; i++) {
+  //   total += arguments[i];
+  // }
+  
+
   if (total < 10) {
     return "Ruby";
   } else if (total >= 10 && total < 20) {
@@ -17,37 +25,45 @@ function decision () {
     return "Python";
   } else {
     return "error";
+
+  
   }
+  }
+
+  function calculateCheckboxVal(checboxArray) {
+    const arrayLength = checboxArray.length;
+    let arraySum = 0;
+
+    for (i = 0; i < arrayLength; i++)
+    {
+      arraySum += checboxArray[i];
+    }
+    return arraySum;
   }
 
   
 // USER INTERFACE LOGIC
 $(document).ready(function() {
   $("form#mainForm").submit(function(event) {
+    event.preventDefault(); 
+
+    let companyVal = [];
+    $(":checkbox:checked").each(function(i) {
+      companyVal[i] = parseInt($(this).val());
+      return companyVal;
+    });
+    
+    
     const fieldVal = parseInt($("input:radio[name=fieldRadio]:checked").val());
     const cityVal = parseInt($("input:radio[name=cityRadio]:checked").val());
     const otherVal = parseInt($("input:radio[name=appRadio]:checked").val());
-    event.preventDefault(); 
+    const companyValSum = calculateCheckboxVal(companyVal);
+    
 
       
-    let companyVal = [];
-      $(":checkbox:checked").each(function(i) {
-        companyVal[i] = parseInt($(this).val());
-      });
- 
-      const arrayLength =companyVal.length;
-      let companyValSum = 0;
-
-      for (i = 0; i < arrayLength; i++)
-      {
-        companyValSum += companyVal[i];
-      }
     
     
-    console.log("companyValtotal:"+companyValSum);
-
-        
-    $(".result").text(decision(fieldVal, cityVal, otherVal));
+    $(".result").text(decision(fieldVal, cityVal, otherVal, companyValSum));
     $(".hidden").show();
   
 });
