@@ -20,18 +20,36 @@ function decision () {
   }
   }
 
+  
 // USER INTERFACE LOGIC
 $(document).ready(function() {
   $("form#mainForm").submit(function(event) {
     const fieldVal = parseInt($("input:radio[name=fieldRadio]:checked").val());
     const cityVal = parseInt($("input:radio[name=cityRadio]:checked").val());
     const otherVal = parseInt($("input:radio[name=appRadio]:checked").val());
-    const companyVal = parseInt($("input:checkbox[name=companyCheckbox]:checked").val());
-    
-    console.log(companyVal);
+    event.preventDefault(); 
 
-    event.preventDefault();     
+      
+    let companyVal = [];
+      $(":checkbox:checked").each(function(i) {
+        companyVal[i] = parseInt($(this).val());
+      });
+ 
+      const arrayLength =companyVal.length;
+      let companyValSum = 0;
+
+      for (i = 0; i < arrayLength; i++)
+      {
+        companyValSum += companyVal[i];
+      }
+    
+    
+    console.log("companyValtotal:"+companyValSum);
+
+        
     $(".result").text(decision(fieldVal, cityVal, otherVal));
     $(".hidden").show();
-  });
+  
 });
+});
+
