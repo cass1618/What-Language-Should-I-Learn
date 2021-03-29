@@ -1,17 +1,11 @@
 // BUSINESS LOGIC
 function decision (fieldVal, cityVal, otherVal, companyValSum) {
-  console.log(companyValSum);
+  
   let total = 0
   total += fieldVal;
   total += cityVal;
   total += otherVal;
   total += companyValSum;
-
-  console.log(total);
-  // for (i = 0; i < arguments.length; i++) {
-  //   total += arguments[i];
-  // }
-  
 
   if (total < 10) {
     return "Ruby";
@@ -52,7 +46,14 @@ $(document).ready(function() {
       companyVal[i] = parseInt($(this).val());
       return companyVal;
     });
+  
+
+    let favoriteColor = 1;
+ 
+    favoriteColor = (($("input:radio[name=colorRadio]:checked").val()));
+    console.log("favoriteColor "+favoriteColor);
     
+
     
     const fieldVal = parseInt($("input:radio[name=fieldRadio]:checked").val());
     const cityVal = parseInt($("input:radio[name=cityRadio]:checked").val());
@@ -60,7 +61,9 @@ $(document).ready(function() {
     const companyValSum = calculateCheckboxVal(companyVal);
     
 
-      
+    const beverage = $("#beverage").val(); 
+
+    console.count(beverage);
     
     
     $(".result").text(decision(fieldVal, cityVal, otherVal, companyValSum));

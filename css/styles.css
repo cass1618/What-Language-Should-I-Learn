@@ -1,3 +1,25 @@
 .hidden {
   display: none;
 }
+
+input[type=radio] {
+    display: none;
+}
+
+
+input[type=radio] + label.btn{
+  height: 50px;
+  width: 50px;
+  margin: 3px;
+  
+  border: 1px solid whitesmoke;
+  box-shadow: 0 0 3px 0 black;
+  border-radius: 15px;
+  box-sizing: border-box;
+} 
+
+
+
+input[type=radio]:checked + label.btn{
+  border: 2px solid black;
+}
