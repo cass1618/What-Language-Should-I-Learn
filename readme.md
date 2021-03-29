@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-# My What-language-should-I-learn
-=======
-# My Portfolio
->>>>>>> 115aa40fd04981e641fcb5ee4d53c53b8067c5f3
+
+# What-language-should-I-learn
 
 ### By Cassandra Copp
 
