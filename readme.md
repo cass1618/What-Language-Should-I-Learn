@@ -17,8 +17,7 @@ This webpage asks the user a series of questions and then reccomends what coding
 
 ## Setup Instructions
 
-[Click here to access live web page](https://cass1618.github.io/what-language-should-i-learn)
-
+[Click here to access live web page](https://cass1618.github.io/What-Language-Should-I-Learn/)
 To download project and run locally:
 1. Clone the repository from GitHub
 1. Open the What-language-should-I-learn folder
