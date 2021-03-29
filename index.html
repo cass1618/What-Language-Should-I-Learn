@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Baloo+2&family=Patrick+Hand&display=swap" rel="stylesheet">
   <link href="css/colors.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
@@ -22,31 +24,31 @@
     <form id="mainForm">
 
 
-      <!-- <h2>Which of the following fields are you most interested in?</h2>
+      <h2>Which of the following fields are you most interested in?</h2>
       <div class="radio">
-        <label><input type="radio" name="fieldRadio" value=1>Medicine</label> 
+        <label><input type="radio" name="fieldRadio" value=1><span>Medicine</span></label> 
       </div>
       <div class="radio">
-        <label><input type="radio" name="fieldRadio" value=2>Engineering</label> 
+        <label><input type="radio" name="fieldRadio" value=2><span>Engineering</span></label> 
       </div>
       <div class="radio">
-        <label><input type="radio" name="fieldRadio" value=3>Finance</label> 
+        <label><input type="radio" name="fieldRadio" value=3><span>Finance</span></label> 
       </div>
       <div class="radio">
-        <label><input type="radio" name="fieldRadio" value=4>Security</label> 
+        <label><input type="radio" name="fieldRadio" value=4><span>Security</span></label> 
       </div>
       <div class="radio">
-        <label><input type="radio" name="fieldRadio" value=5>Technology</label> 
+        <label><input type="radio" name="fieldRadio" value=5><span>Technology</span></label> 
       </div>
       <div class="radio">
-        <label><input type="radio" name="fieldRadio" value=6>Design</label> 
+        <label><input type="radio" name="fieldRadio" value=6><span>Design</span></label> 
       </div>
       <div class="radio">
-        <label><input type="radio" name="fieldRadio" value=7>Advertising</label> 
+        <label><input type="radio" name="fieldRadio" value=7><span>Advertising</span></label> 
       </div>
-      <div>
-      <label><input type="radio" name="fieldRadio" value=7>None of these options sound interesting to me</label> 
-      </div> -->
+      <div class="radio">
+      <label><input type="radio" name="fieldRadio" value=7><span>None of these options sound interesting to me</span></label> 
+      </div>
 
       <!-- <h2>Which city would you most like to live in?</h2>
       <div class="radio">
@@ -102,25 +104,25 @@
 
       <h2>What would be your ideal company to work for?</h2>
       <div class="checkbox">
-        <label><input type="checkbox" name="companyCheckbox1" value=1>Google</label> 
+        <label><input type="checkbox" name="companyCheckbox1" value=1><span>Google</span></label> 
       </div>
       <div class="checkbox">
-        <label><input type="checkbox" name="companyCheckbox2" value=2>Firefox</label> 
+        <label><input type="checkbox" name="companyCheckbox2" value=2><span>Firefox</span></label> 
       </div>
       <div class="checkbox">
-        <label><input type="checkbox" name="companyCheckbox3" value=2>eBay</label> 
+        <label><input type="checkbox" name="companyCheckbox3" value=2><span>eBay</span></label> 
       </div>
       <div class="checkbox">
-        <label><input type="checkbox" name="companyCheckbox4" value=3>Amazon</label> 
+        <label><input type="checkbox" name="companyCheckbox4" value=3><span>Amazon</span></label> 
       </div>
       <div class="checkbox">
-        <label><input type="checkbox" name="companyCheckbox5" value=4>Apple</label> 
+        <label><input type="checkbox" name="companyCheckbox5" value=4><span>Apple</span></label> 
       </div>
       <div class="checkbox">
-        <label><input type="checkbox" name="companyCheckbox6" value=6>NASA</label> 
+        <label><input type="checkbox" name="companyCheckbox6" value=6><span>NASA</span></label> 
       </div>
       <div class="checkbox">
-        <label><input type="checkbox" name="companyCheckbox7" value=7>Facebook</label> 
+        <label><input type="checkbox" name="companyCheckbox7" value=7><span>Facebook</span></label> 
       </div>
 
 
@@ -154,25 +156,26 @@
 
           <!-- <input type="radio" name="colorRadio1" value=7>
           <label for="colorRadio1" class="btn"></label> -->
-    
+    <div class="colorSelector">
           <input type="radio" id="color1" name="colorRadio" value="9932cc">
-            <label for="color1" class="btn color1"></label>
+            <label for="color1" class="btn" id="color1"></label>
     <input type="radio" id="color1" name="colorRadio" value="9932cc">
-      <label for="color1" class="btn color2"></label>
+      <label for="color1" class="btn" id="color2"></label>
       <input type="radio" id="color1" name="colorRadio" value="9932cc">
-      <label for="color1" class="btn color3"></label>
+      <label for="color1" class="btn" id="color3"></label>
       <input type="radio" id="color1" name="colorRadio" value="9932cc">
-      <label for="color1" class="btn color4"></label>
+      <label for="color1" class="btn" id="color4"></label>
       <input type="radio" id="color1" name="colorRadio" value="9932cc">
-      <label for="color1" class="btn color5"></label>
+      <label for="color1" class="btn" id="color5"></label>
       <input type="radio" id="color1" name="colorRadio" value="9932cc">
-      <label for="color1" class="btn color6"></label>
+      <label for="color1" class="btn" id="color6"></label>
       <input type="radio" id="color1" name="colorRadio" value="9932cc">
-      <label for="color1" class="btn color7"></label>
+      <label for="color1" class="btn" id="color7"></label>
       <input type="radio" id="color1" name="colorRadio" value="9932cc">
-      <label for="color1" class="btn color8"></label>
+      <label for="color1" class="btn" id="color8"></label>
       <input type="radio" id="color1" name="colorRadio" value="9932cc">
-      <label for="color1" class="btn color9"></label>
+      <label for="color1" class="btn" id="color9"></label>
+    </div>
 
       
       

@@ -1,25 +1,54 @@
+h1 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 12vh;
+  margin: 5vh;
+}
+
+h2 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 8vh;
+  margin: 2vh;
+}
+
+p {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 6vh;
+  margin: 5vh;
+}
+
+
 .hidden {
   display: none;
 }
 
-input[type=radio] {
+.radio span {
+  margin-left: 1vw;
+  font-size: 4vh;
+  font-family: 'Baloo 2', cursive;
+  font-size: 6vh;
+}
+
+.checkbox span {
+  margin-left: 1vw;
+  font-size: 4vh;
+  font-family: 'Baloo 2', cursive;
+  font-size: 6vh;
+}
+
+.colorSelector input[type=radio] {
     display: none;
 }
 
-
-input[type=radio] + label.btn{
+.colorSelector input[type=radio] + label.btn {
   height: 50px;
   width: 50px;
   margin: 3px;
-  
   border: 1px solid whitesmoke;
   box-shadow: 0 0 3px 0 black;
   border-radius: 15px;
   box-sizing: border-box;
 } 
 
-
-
-input[type=radio]:checked + label.btn{
+.colorSelector input[type=radio]:checked + label.btn {
   border: 2px solid black;
 }
