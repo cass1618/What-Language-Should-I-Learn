@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # My What-language-should-I-learn
+=======
+# My Portfolio
+>>>>>>> 115aa40fd04981e641fcb5ee4d53c53b8067c5f3
 
 ### By Cassandra Copp
 
@@ -20,8 +24,13 @@ This webpage asks the user a series of questions and then reccomends what coding
 
 To download project and run locally:
 1. Clone the repository from GitHub
+<<<<<<< HEAD
 1. Open the What-language-should-I-learn folder
 1. Open "What-language-should-I-learn.html" using your web browser
+=======
+1. Open the Portfolio folder
+1. Open "portfolio.html" using your web browser
+>>>>>>> 115aa40fd04981e641fcb5ee4d53c53b8067c5f3
 
 ## Known bugs
 
