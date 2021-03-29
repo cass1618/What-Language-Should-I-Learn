@@ -45,8 +45,3 @@ Copywrite (c) Cassandra Copp 2021.
 ## Contact Information
 
 [github.com/cass1618](http://github.com/cass1618)
-
-
-
-
-

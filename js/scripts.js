@@ -1,6 +1,5 @@
 // BUSINESS LOGIC
 function decision (fieldVal, cityVal, otherVal, companyValSum) {
-  
   let total = 0
   total += fieldVal;
   total += cityVal;
@@ -8,34 +7,30 @@ function decision (fieldVal, cityVal, otherVal, companyValSum) {
   total += companyValSum;
 
   if (total < 10) {
-    return "Ruby";
+    return "Ruby!";
   } else if (total >= 10 && total < 20) {
-    return "Javascript";
+    return "Javascript!";
   } else if (total >= 20 && total < 30) {
-    return "Swift";
+    return "Swift!";
   } else if (total >= 30 && total < 40) {
-    return "Java";
-  } else if (total >= 40 && total < 50) {
-    return "Python";
+    return "Java!";
+  } else if (total >= 50) {
+    return "Python!";
   } else {
-    return "error";
-
-  
+    return "ERROR!  Please try again.";
   }
+}
+
+function calculateCheckboxVal (checboxArray) {
+  const arrayLength = checboxArray.length;
+  let arraySum = 0;
+
+  for (i = 0; i < arrayLength; i++) {
+    arraySum += checboxArray[i];
   }
+  return arraySum;
+}
 
-  function calculateCheckboxVal(checboxArray) {
-    const arrayLength = checboxArray.length;
-    let arraySum = 0;
-
-    for (i = 0; i < arrayLength; i++)
-    {
-      arraySum += checboxArray[i];
-    }
-    return arraySum;
-  }
-
-  
 // USER INTERFACE LOGIC
 $(document).ready(function() {
   $("form#mainForm").submit(function(event) {
@@ -47,28 +42,15 @@ $(document).ready(function() {
       return companyVal;
     });
   
-
-    let favoriteColor = 1;
- 
-    favoriteColor = (($("input:radio[name=colorRadio]:checked").val()));
-    console.log("favoriteColor "+favoriteColor);
-    
-
-    
+    const yourColor= (($("input:radio[name=colorRadio]:checked").val()));
     const fieldVal = parseInt($("input:radio[name=fieldRadio]:checked").val());
     const cityVal = parseInt($("input:radio[name=cityRadio]:checked").val());
     const otherVal = parseInt($("input:radio[name=appRadio]:checked").val());
+    const musicVal = parseInt($("input:radio[name=musicRadio]:checked").val());
     const companyValSum = calculateCheckboxVal(companyVal);
-    
 
-    const beverage = $("#beverage").val(); 
-
-    console.count(beverage);
-    
-    
-    $(".result").text(decision(fieldVal, cityVal, otherVal, companyValSum));
-    $(".hidden").show();
-  
+    $(".result").text(decision(fieldVal, cityVal, otherVal, musicVal, companyValSum));
+    $(".hidden").show();  
+    $("body").css("background-color", yourColor);
+  });
 });
-});
-
